@@ -30,3 +30,15 @@ footer {
   border-radius: 12px;
   /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
 }
+
+
+.viewerBadge_container__r5tak {
+    bottom: 0;
+    display: flex;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    position: fixed;
+    right: 0;
+    z-index: 50;
+    visibility: hidden;
+}
