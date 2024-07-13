@@ -1,0 +1,2 @@
+# Sentiment Analysis App
+ The Simple Sentiment Analysis App is designed to provide users with a straightforward and interactive way to analyze the sentiment of a given text. Users can input text such as tweets, reviews, or comments, and the app will determine if the sentiment is positive, negative, or neutral. This app utilizes natural language processing (NLP) techniques to offer sentiment classification and visualization features.
