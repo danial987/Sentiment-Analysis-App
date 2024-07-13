@@ -98,5 +98,3 @@ The Sentiment Analysis App is a powerful yet easy-to-use tool for analyzing the 
 - **Text File:** Create a TXT file with some text to test the file upload functionality.
 
 ---
-
-This README provides a comprehensive overview of the Sentiment Analysis App, including its features, usage instructions, technical details, and future enhancements.
