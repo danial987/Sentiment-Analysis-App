@@ -98,3 +98,6 @@ The Sentiment Analysis App is a powerful yet easy-to-use tool for analyzing the 
 - **Text File:** Create a TXT file with some text to test the file upload functionality.
 
 ---
+
+### Live Version
+View the live version of the app [here]([url](https://danial-sentiment-analysis-app.streamlit.app/)). 
