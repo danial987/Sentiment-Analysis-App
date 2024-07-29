@@ -62,17 +62,17 @@ def input_page():
     load_css()
     st.title("Sentiment Analysis App")
     
-    with st.container(Border=True):
+    with st.container(border=True):
         input_tabs = st.tabs(["Enter Text", "Upload File"])
         
         with input_tabs[0]:
             st.write("Enter the text you want to analyze for sentiment:")
-            with st.container(Border=True):
+            with st.container(border=True):
                 st.session_state.user_input = st.text_area("Input Text", height=200)
         
         with input_tabs[1]:
             st.write("Upload a file to analyze for sentiment:")
-            with st.container(Border=True):
+            with st.container(border=True):
                 uploaded_file = st.file_uploader("Upload a PDF, Word, or TXT file", type=["pdf", "docx", "txt"])
                 if uploaded_file is not None:
                     if uploaded_file.type == "application/pdf":
@@ -106,11 +106,11 @@ def results_page():
             st.session_state.page = "input"
             st.experimental_set_query_params(page="input")
         
-        with st.container(Border=True):
+        with st.container(border=True):
             tabs = st.tabs(["Results", "Visualizations", "Detailed Breakdown", "Top Words by Sentiment", "Historical Analysis", "Emotion Analysis"])
             
             with tabs[0]:
-                with st.container(Border=True):
+                with st.container(border=True):
                     col1, col2 = st.columns(2)
                     
                     with col1:
@@ -119,7 +119,7 @@ def results_page():
                     with col2:
                         st.metric(label="Confidence Score", value=f"{st.session_state.confidence:.2f}%")
                 
-                with st.container(Border=True):
+                with st.container(border=True):
                     st.subheader("Sentiment Summary")
                     positive_count, negative_count, neutral_count = get_sentiment_summary(st.session_state.user_input)
                     col1, col2, col3 = st.columns(3)
@@ -136,7 +136,7 @@ def results_page():
             with tabs[1]:
                 st.header("Visualizations")
                 
-                with st.container(Border=True):
+                with st.container(border=True):
                     vis_tabs = st.tabs(["Sentiment Distribution", "Word Cloud", "Interactive Word Cloud", "Sentiment Heatmap", "Sentiment Timeline", "Treemap", "Hierarchical Tree"])
                     
                     with vis_tabs[0]:
@@ -189,7 +189,7 @@ def results_page():
                 st.header("Detailed Breakdown")
                 detailed_sentiments = st.session_state.detailed_sentiments
                 
-                with st.container(Border=True):
+                with st.container(border=True):
                     breakdown_tabs = st.tabs(["Sentiment Score Trend", "Detailed Sentiment Scores"])
 
                     with breakdown_tabs[0]:
@@ -224,11 +224,11 @@ def results_page():
 
             with tabs[4]:
                 st.header("Historical Analysis")
-                with st.container(Border=True):
+                with st.container(border=True):
                     history_df = pd.DataFrame(st.session_state.history)
                     st.dataframe(history_df)
 
-                with st.container(Border=True):
+                with st.container(border=True):
                     st.subheader("Overall Sentiment Distribution")
                     overall_positive = history_df[history_df['Sentiment'] == 'Positive'].shape[0]
                     overall_negative = history_df[history_df['Sentiment'] == 'Negative'].shape[0]
