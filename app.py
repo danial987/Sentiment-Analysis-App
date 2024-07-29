@@ -93,7 +93,7 @@ def input_page():
                 })
                 st.session_state.analysis_done = True
                 st.session_state.page = "results"
-                st.experimental_rerun()
+                st.experimental_set_query_params(page="results")
             else:
                 st.write("Please enter text to analyze or upload a file.")
 
@@ -104,7 +104,7 @@ def results_page():
     if 'analysis_done' in st.session_state and st.session_state.analysis_done:
         if st.button("Back"):
             st.session_state.page = "input"
-            st.experimental_rerun()
+            st.experimental_set_query_params(page="input")
         
         with st.container():
             tabs = st.tabs(["Results", "Visualizations", "Detailed Breakdown", "Top Words by Sentiment", "Historical Analysis", "Emotion Analysis"])
